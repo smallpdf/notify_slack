@@ -14,7 +14,6 @@ jobs:
       - run: make build
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "release.tag.gz"
-          bodyFile: "bin/notify_slack"
+          artifacts: "bin/notify_slack"
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
