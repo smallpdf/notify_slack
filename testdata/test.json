@@ -1,0 +1,8 @@
+{"Time":"2022-07-06T10:12:26.547122594+02:00","Action":"run","Package":"mctest","Test":"TestHelloWorld"}
+{"Time":"2022-07-06T10:12:26.547260577+02:00","Action":"output","Package":"mctest","Test":"TestHelloWorld","Output":"=== RUN   TestHelloWorld\n"}
+{"Time":"2022-07-06T10:12:26.547274518+02:00","Action":"output","Package":"mctest","Test":"TestHelloWorld","Output":"    simple_test.go:6: not implemented\n"}
+{"Time":"2022-07-06T10:12:26.547281599+02:00","Action":"output","Package":"mctest","Test":"TestHelloWorld","Output":"--- FAIL: TestHelloWorld (0.00s)\n"}
+{"Time":"2022-07-06T10:12:26.547285509+02:00","Action":"fail","Package":"mctest","Test":"TestHelloWorld","Elapsed":0}
+{"Time":"2022-07-06T10:12:26.54729084+02:00","Action":"output","Package":"mctest","Output":"FAIL\n"}
+{"Time":"2022-07-06T10:12:26.547336434+02:00","Action":"output","Package":"mctest","Output":"FAIL\tmctest\t0.001s\n"}
+{"Time":"2022-07-06T10:12:26.547373528+02:00","Action":"fail","Package":"mctest","Elapsed":0.001}
