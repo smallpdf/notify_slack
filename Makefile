@@ -45,7 +45,7 @@ help: ## Display this help
 build: $(BINS) ## Build executables
 $(BIN_DIR)/%: $(GO_SRC)
 	$(Q)$(ECHO) "GO" $(call UPPER, $@)
-	$(Q)$(CGO) $(GOBUILD) $(LDFLAGS) -o $@ main.go 2>&1 | $(FORMAT)
+	$(Q)$(CGO) $(GOBUILD) $(LDFLAGS) -o $@ notify_slack.go 2>&1 | $(FORMAT)
 
 .PHONY: fmt
 fmt: ## Run go fmt against code
