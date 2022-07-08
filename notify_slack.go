@@ -158,7 +158,7 @@ func main() {
 	tests := testsToReport(records)
 	log.Debug().Interface("Tests", tests).Msg("")
 
-	token := "xoxb-2666384999-3765178633411-GH3pw25B54bwWuHHJsdr5oyu"
+	token := "xoxb-2666384999-3765178633411-oQMiojQJ6Iua1sPQAXJUMZfo"
 	c := slack.New(token)
 	userIds := userIdsFromEmails(c, cfg.Users)
 
