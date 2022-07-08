@@ -16,11 +16,12 @@ import (
 )
 
 type config struct {
-	LogLevel  string
-	LogFormat string
-	DryRun    bool
-	Users     []string
-	Groups    []string
+	LogLevel   string `default:"info"`
+	LogFormat  string `default:"json"`
+	DryRun     bool
+	Users      []string
+	Groups     []string
+	SlackToken string `required:"true"`
 }
 
 type test struct {
@@ -150,6 +151,7 @@ func sendSlack(c *slack.Client, tests []test, usersGroups ...string) {
 func main() {
 	if err := envconfig.Process("notify", &cfg); err != nil {
 		log.Err(err).Msg("can't read config")
+		return
 	}
 	setupLogging()
 	log.Debug().Interface("config", cfg).Msg("")
@@ -158,8 +160,7 @@ func main() {
 	tests := testsToReport(records)
 	log.Debug().Interface("Tests", tests).Msg("")
 
-	token := "xoxb-2666384999-3765178633411-oQMiojQJ6Iua1sPQAXJUMZfo"
-	c := slack.New(token)
+	c := slack.New(cfg.SlackToken)
 	userIds := userIdsFromEmails(c, cfg.Users)
 
 	sendSlack(c, tests, append(userIds, cfg.Groups...)...)
