@@ -2,6 +2,11 @@
 
 Turns your failing `go test` into slack messages
 
+## installation
+```sh
+wget -nv https://github.com/smallpdf/notify_slack/releases/latest/download/notify_slack && chmod +x notify_slack
+```
+
 ## setup
 environment variables
 ```sh
