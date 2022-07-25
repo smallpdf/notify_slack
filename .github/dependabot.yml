@@ -11,3 +11,5 @@ updates:
       - "cebe"
     schedule:
       interval: "daily"
+    ignore:
+      update-types: ["version-update:semver-patch"]
