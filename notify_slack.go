@@ -160,6 +160,11 @@ func main() {
 	tests := testsToReport(records)
 	log.Debug().Interface("Tests", tests).Msg("")
 
+	if tests == nil {
+		log.Debug().Msg("nothing to do.")
+		return
+	}
+
 	c := slack.New(cfg.SlackToken)
 	userIds := userIdsFromEmails(c, cfg.Users)
 
