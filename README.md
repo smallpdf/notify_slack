@@ -22,7 +22,7 @@ NOTIFY_SLACKTOKEN=....
 
 ## example
 ```
-go test -json ./testdata | tee notify_slack
+go test -json ./testdata | tee >(./notify_slack)
 go test -json ./testdata | tee >(NOTIFY_USERS=user@smallpdf.com notify_slack)
 ```
 Don't forget to add `Tester` to the Account or Group.
