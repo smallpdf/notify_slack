@@ -6,7 +6,7 @@ require (
 	github.com/itchyny/gojq v0.12.8
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/rs/zerolog v1.28.0
-	github.com/slack-go/slack v0.11.2
+	github.com/slack-go/slack v0.11.3
 )
 
 require (
